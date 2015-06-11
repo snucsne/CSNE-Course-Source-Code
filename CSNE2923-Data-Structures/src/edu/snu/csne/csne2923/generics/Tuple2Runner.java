@@ -66,6 +66,11 @@ public class Tuple2Runner
                 + stringTuple.getFirst()
                 + "]" );
 
+        // No need to cast the Object back to the right type
+        String first = stringTuple.getFirst();
+
+        // Java enforces type safety!
+//        stringTuple.setFirst( new Float( 77.0f ) );
     }
 
 }

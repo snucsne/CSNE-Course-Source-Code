@@ -65,6 +65,9 @@ public class Tuple2ObjectRunner
                 + stringTuple.getFirst()
                 + "]" );
 
+        // We must cast the Object back to the right type
+        String first = (String) stringTuple.getFirst();
+
         // No type safety!
         stringTuple.setFirst( new Float( 77.0f ) );
         System.out.println( "String first value after INVALID change ["
