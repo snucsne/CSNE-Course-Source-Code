@@ -23,16 +23,33 @@
  */
 package edu.snu.csne.csne2923.bags;
 
+// Imports
 import java.util.Set;
+import org.apache.commons.collections4.bag.HashBag;
+
 
 /**
- * TODO Class description
+ * A simple Bag implementation that uses an Apache Commons implementation of
+ * a Bag.  The purpose of the class is to illustrate how a bag is used, not
+ * implemented. 
  *
  * @author Brent Eskridge
  */
 public class ConcreteBagADT<T> implements BagADT<T>
 {
-
+    /** Use the Apache Commons implementation since we want to focus on the
+     * interface at this point and not implementation. */
+    private HashBag<T> _bagImpl = new HashBag<T>();
+    
+    
+    /**
+     * Default constructor
+     */
+    public ConcreteBagADT()
+    {
+        // Do nothing
+    }
+    
     /**
      * Adds a new entry to the bag.
      *
@@ -43,8 +60,7 @@ public class ConcreteBagADT<T> implements BagADT<T>
      */
     public boolean add( T entry )
     {
-        // TODO Auto-generated method stub
-        return false;
+        return _bagImpl.add( entry );
     }
 
     /**
@@ -58,8 +74,14 @@ public class ConcreteBagADT<T> implements BagADT<T>
      */
     public T remove( T entry )
     {
-        // TODO Auto-generated method stub
-        return null;
+        boolean result = _bagImpl.remove( entry );
+        T returnValue = null;
+        if( result )
+        {
+            returnValue = entry;
+        }
+        
+        return returnValue;
     }
 
     /**
@@ -72,8 +94,7 @@ public class ConcreteBagADT<T> implements BagADT<T>
      */
     public boolean contains( T entry )
     {
-        // TODO Auto-generated method stub
-        return false;
+        return _bagImpl.contains( entry );
     }
 
     /**
@@ -87,8 +108,7 @@ public class ConcreteBagADT<T> implements BagADT<T>
      */
     public int getCount( T entry )
     {
-        // TODO Auto-generated method stub
-        return 0;
+        return _bagImpl.getCount( entry );
     }
 
     /**
@@ -101,8 +121,7 @@ public class ConcreteBagADT<T> implements BagADT<T>
      */
     public Set<T> getUniqueSet()
     {
-        // TODO Auto-generated method stub
-        return null;
+        return _bagImpl.uniqueSet();
     }
 
     /**
@@ -111,10 +130,9 @@ public class ConcreteBagADT<T> implements BagADT<T>
      * @return An array containing all the entries in this bag
      * @see edu.snu.csne.csne2923.bags.BagADT#toArray()
      */
-    public T[] toArray()
+    public Object[] toArray()
     {
-        // TODO Auto-generated method stub
-        return null;
+        return _bagImpl.toArray();
     }
 
     /**
@@ -126,8 +144,7 @@ public class ConcreteBagADT<T> implements BagADT<T>
      */
     public boolean isEmpty()
     {
-        // TODO Auto-generated method stub
-        return false;
+        return (0 == _bagImpl.size());
     }
 
     /**
@@ -139,43 +156,40 @@ public class ConcreteBagADT<T> implements BagADT<T>
      */
     public boolean isFull()
     {
-        // TODO Auto-generated method stub
         return false;
     }
 
     /**
-     * TODO Method description
+     * Returns the number of entries in the bag.
      *
-     * @return
+     * @return The the number of entries in the bag
      * @see edu.snu.csne.csne2923.bags.BagADT#size()
      */
     public int size()
     {
-        // TODO Auto-generated method stub
-        return 0;
+        return _bagImpl.size();
     }
 
     /**
-     * TODO Method description
+     * Removes all entries from the bag.
      *
      * @see edu.snu.csne.csne2923.bags.BagADT#clear()
      */
     public void clear()
     {
-        // TODO Auto-generated method stub
-        
+        _bagImpl.clear();
     }
 
     /**
-     * TODO Method description
+     * Returns a formatted description of this bag.  The description
+     * contains all of the entries in the bag in a random order.
      *
-     * @return
+     * @return A formatted description of this bag
      * @see edu.snu.csne.csne2923.bags.BagADT#toFormattedString()
      */
     public String toFormattedString()
     {
-        // TODO Auto-generated method stub
-        return null;
+        return "Not yet implemented";
     }
 
 }

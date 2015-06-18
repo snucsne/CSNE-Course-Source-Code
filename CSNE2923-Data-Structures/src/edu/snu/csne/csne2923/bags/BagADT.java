@@ -65,7 +65,7 @@ public interface BagADT<T>
      *
      * @return An array containing all the entries in this bag
      */
-    public T[] toArray();
+    public Object[] toArray();
 
     /**
      * Determines if the bag is empty.
