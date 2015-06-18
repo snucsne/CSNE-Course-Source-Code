@@ -130,9 +130,16 @@ public class ConcreteBagADT<T> implements BagADT<T>
      * @return An array containing all the entries in this bag
      * @see edu.snu.csne.csne2923.bags.BagADT#toArray()
      */
-    public Object[] toArray()
+    @SuppressWarnings("unchecked")
+    public T[] toArray()
     {
-        return _bagImpl.toArray();
+        T[] tempArray = (T[]) new Object[size()];
+        Object[] implArray = _bagImpl.toArray();
+        for( int i = 0; i < implArray.length; i++ )
+        {
+            tempArray[i] = (T) implArray[i];
+        }
+        return tempArray;
     }
 
     /**
