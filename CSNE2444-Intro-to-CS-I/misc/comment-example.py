@@ -27,3 +27,27 @@
 
 # ==============================================================================
 
+def iterative_multiply( x, y ):
+    # Start off with a result of 0
+    result = 0
+
+    # Add x to result, y times
+    for i in range(y):
+        result = result + x
+
+    # Return the result
+    return result
+
+
+def recursive_multiply( x, y ):
+    result = 0
+    # Base Case:
+    # If y is 0, then x * 0 = 0
+    if( 0 >= y ):
+        result = 0
+
+    # Otherwise, add x to x * (y - 1)
+    else:
+        result = x + recursive_multiply( x, y-1 )
+    
+    return result
