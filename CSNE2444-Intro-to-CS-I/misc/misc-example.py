@@ -27,3 +27,19 @@
 
 # ==============================================================================
 
+def absolute_value( n ):
+    if( n < 0):
+        return -n
+    else:
+        return n
+
+print( absolute_value( 5 ) )
+print( absolute_value( -5 ) )
+
+def better_absolute_value( n ):
+    result = n
+    
+    if( n < 0 ):
+        result = -n
+
+    return result

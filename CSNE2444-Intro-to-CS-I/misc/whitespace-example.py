@@ -31,13 +31,13 @@
 # This function uses 4 spaces for indentation
 def multiply( x, y ):
     z = x * y
-    print z
+    print(z)
 
 # This function uses a tab to indent the first line.  Your computer may
 # display it properly, or it may not.
 def multiply( x, y ):
 	z = x * y
-    print z
+    print(z)
   
 
 # ==============================================================================
@@ -46,3 +46,32 @@ def multiply( x, y ):
 # This comment goes well beyond column 80 -------------------------------------------------------------------------------------------------------------------->|
 
 
+# ==============================================================================
+# Use blank lines to separate sections of code that belong together
+
+# -- Use the quadratic formula as an example --
+import math
+
+# Create our variables
+a = -7
+b = 2
+c = 9
+
+# Calculate the value in the square root
+value_to_be_rooted = b * b - 4 * a * c
+rooted_value = math.sqrt( value_to_be_rooted )
+
+# Calculate the two different numerators
+positive_numerator = -1 * b + rooted_value
+negative_numerator = -1 * b - rooted_value
+
+# Calculate the denominator
+denominator = 2 * a
+
+# Calculate the two factors
+positive_factor = positive_numerator / denominator
+negative_factor = negative_numerator / denominator
+
+# Display them
+print( "Positive factor [", positive_factor, "]" )
+print( "Negative factor [", negative_factor, "]" )

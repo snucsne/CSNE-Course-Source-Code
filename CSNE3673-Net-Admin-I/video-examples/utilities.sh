@@ -114,6 +114,9 @@ file ~
 #   display it to the screen
 grep home /etc/passwd | awk -F ':' '{print $6;}' | ls -l | less
 
+# Sort the names file and then remove the duplicates
+sort names.txt | uniq
+
 
 # ==============================================================================
 # Miscellaneous Utilities
