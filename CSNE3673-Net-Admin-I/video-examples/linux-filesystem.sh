@@ -26,15 +26,69 @@
 # ******************************************************************************
 # Ch. 04 - Linux Filesystem
 
+# ******************************************************************************
+# Pathnames
+
+# Change directories using an absolute path
+cd /var/log
+
+# Change directories using an absolute path
+cd ~/video-lecture
+
+# Change directories using a relative path
+cd ../../var/log
+
+# Using cd without specifying a directory takes you to your home directory
+cd
+pwd
+
+# Change directory to a directory with lecture files using a relative path
+cd video-lecture
+
+# List all the files, including the hidden ones
+ls -a
+
 
 # ******************************************************************************
 # Working with Directories
 
+# Try to create a directory with missing parent directories
+mkdir long/directory/path
+# Do it again but create any parent directories that don't already exist
+mkdir -p long/directory/path
+
+# Create a directory so we can delete it
+mkdir dir-to-delete
+# Delete it
+rmdir dir-to-delete
+
+# Create an empty file in a directory to delete
+mkdir nonempty-dir-to-delete
+touch nonempty-dir-to-delete/empty-file.txt
+ls -l nonempty-dir-to-delete
+# Try to delete the directory
+rmdir nonempty-dir-to-delete
+# Force it to delete
 
 
 # ******************************************************************************
 # Access Permissions
 
+# Look at the permissions of a few files
+ls -l
+
+# Change permissions of a sample file so the owner has read/write permissions,
+# the group also has read/write permission, but the world only has read
+# permissions
+chmod 664 permissions.txt
+ls -l permissions.txt
+
+# Update the permissions to remove write permission for groups
+chmod g-w permissions.txt
+ls -l permissions.txt
+
+# The passwd utility has the setuid bit set
+ls -l /usr/bin/passwd
 
 
 # ******************************************************************************
