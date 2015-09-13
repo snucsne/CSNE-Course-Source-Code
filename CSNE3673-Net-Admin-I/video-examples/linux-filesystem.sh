@@ -36,7 +36,7 @@ cd /var/log
 cd ~/video-lecture
 
 # Change directories using a relative path
-cd ../../var/log
+cd ../../../var/log
 
 # Using cd without specifying a directory takes you to your home directory
 cd
