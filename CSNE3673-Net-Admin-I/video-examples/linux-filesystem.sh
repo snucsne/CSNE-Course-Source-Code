@@ -69,6 +69,7 @@ ls -l nonempty-dir-to-delete
 # Try to delete the directory
 rmdir nonempty-dir-to-delete
 # Force it to delete
+rm -rf nonempty-dir-to-delete
 
 
 # ******************************************************************************
