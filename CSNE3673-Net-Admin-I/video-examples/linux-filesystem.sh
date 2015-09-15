@@ -36,7 +36,7 @@ cd /var/log
 cd ~/video-lecture
 
 # Change directories using a relative path
-cd ../../var/log
+cd ../../../var/log
 
 # Using cd without specifying a directory takes you to your home directory
 cd
@@ -69,6 +69,7 @@ ls -l nonempty-dir-to-delete
 # Try to delete the directory
 rmdir nonempty-dir-to-delete
 # Force it to delete
+rm -rf nonempty-dir-to-delete
 
 
 # ******************************************************************************
