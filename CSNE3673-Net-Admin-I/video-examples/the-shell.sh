@@ -47,6 +47,27 @@ cat < /dev/null
 
 
 # ******************************************************************************
+# Pipelines
+
+# A command using pipes
+grep -i 'ed' names.txt | sort | uniq
+
+# Commands not using pipes
+grep -i 'ed' names.txt > ed-names.txt
+sort < ed-names.txt > sorted-ed-names.txt
+uniq < sorted-ed-names.txt
+rm ed-names.txt sorted-ed-names.txt
+
+# A command to find how many times I am logged into the system using pipes
+who | grep ${USER} | wc -l
+# The same command without pipes
+who > who-is-logged-in.txt
+grep $USER who-is-logged-in.txt > my-logins.txt
+wc -l my-logins.txt
+rm who-is-logged-in.txt my-logins.txt
+
+
+# ******************************************************************************
 # Running Commands in the Background
 
 # Start a GUI command in the background
@@ -69,9 +90,24 @@ bg
 # Wildcards
 
 # TODO
+# List all the files in the directory
+ls
+# List only the ones matching the pattern using '?'
+ls memo?
+ls to?
+# List only the ones matching the pattern using '*' at the end
+ls memo*
+# List only the ones matching the pattern using muliple '*'
+ls *emo*
+# List only the ones matching the pattern using [ ]
+ls memo[124]
+ls memo[1-3]
+ls [to]*
+
 
 # ******************************************************************************
 # Builtin Commands
 
 # List all the builtin commands
 help
+
