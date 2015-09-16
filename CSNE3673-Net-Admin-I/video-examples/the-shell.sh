@@ -89,7 +89,6 @@ bg
 # ******************************************************************************
 # Wildcards
 
-# TODO
 # List all the files in the directory
 ls
 # List only the ones matching the pattern using '?'
