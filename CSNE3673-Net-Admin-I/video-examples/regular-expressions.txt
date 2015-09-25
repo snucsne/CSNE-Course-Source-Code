@@ -83,7 +83,7 @@ The Cat in the Hat
 [hc].*at
 
 # Match an 'h' or 'c' exactly 2 times followed by 'at'
-[hc]{2,}at
+[hc]{2}at
 
 # Match an 'h' or 'c' at least 2 times followed by 'at'
 [hc]{2,}at
