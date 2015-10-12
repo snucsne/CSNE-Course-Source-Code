@@ -25,6 +25,10 @@
 # ******************************************************************************
 # If examples
 
+if [[ -d /etc/ ]]; then
+	echo /etc/ is indeed a directory
+fi
+
 # Check to see if a file exists
 if [[ -e sample.txt ]]; then
 	echo The file sample.txt exists

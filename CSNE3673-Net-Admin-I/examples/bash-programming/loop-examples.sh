@@ -58,6 +58,7 @@ done
 # ******************************************************************************
 # While loop examples
 
+# Countdown to blastoff
 echo Executing a while loop to countdown to blastoff
 counter=5
 while [ "$counter" -gt 0 ]; do
