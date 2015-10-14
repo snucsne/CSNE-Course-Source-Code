@@ -26,6 +26,7 @@
 # (g)awk examples
 
 # Selects all the lines in the cars file that contain the string 'chevy'
+echo "============================================================"
 echo "Selecting all lines that contain the string 'chevy'"
 gawk '/chevy/' cars
 echo
@@ -33,12 +34,14 @@ echo
 
 # Selects all the lines in the cars file that contain the string 'chevy' and
 # print the year & make:
+echo "============================================================"
 echo "Selecting all lines that contain 'chevy' and print the year and make"
 gawk '/chevy/ {print $3, $1}' cars
 echo
 
 
 # Selects all the lines that contain the letter h in the first field (make):
+echo "============================================================"
 echo "Selecting all lines that contain the letter h in the first field"
 gawk '$1 ~ /h/' cars
 echo
@@ -46,6 +49,7 @@ echo
 
 # Selects all the lines that contain the letter h as the first character in
 # the first field (make):
+echo "============================================================"
 echo "Selecting all lines that contain h as the first character in the first field"
 gawk '$1 ~ /^h/' cars
 echo
@@ -53,12 +57,14 @@ echo
 
 # Selects all the lines in the cars file in which the third column (year) ends in
 # a 5 and prints the year, make, & price:
+echo "============================================================"
 echo "Selecting lines in which the third comlumn ends in 5 and prints the year, make and price"
 gawk '$3 ~ /5$/ {print $3, $1, "$" $5}' cars
 echo
 
 
 # Selects all the lines where the price is greater than or equal to $2000 and less than $9000:
+echo "============================================================"
 echo "Selecting lines where the price is greater than or equal to $2000 and less than $9000"
 gawk '2000 <= $5 && $5 < 9000' cars
 echo

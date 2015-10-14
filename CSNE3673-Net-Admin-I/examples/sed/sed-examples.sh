@@ -25,17 +25,17 @@
 # ******************************************************************************
 # sed examples
 
-# Select the lines from new that contain the string line:
+# Select the lines from file.txt that contain the string line:
 echo "============================================================"
-echo "Select the lines from new that contain the string line"
-sed -n '/line/ p' new
+echo "Select the lines from file.txt that contain the string line"
+sed -n '/line/ p' file.txt
 echo
 
 
-# Selects and displays lines 3 through 6 of the file new:
+# Selects and displays lines 3 through 6 of the file file.txt:
 echo "============================================================"
-echo "Selects and displays lines 3 through 6 of the file new"
-sed -n '3,6 p' new
+echo "Selects and displays lines 3 through 6 of the file file.txt"
+sed -n '3,6 p' file.txt
 echo
 
 
@@ -45,14 +45,14 @@ echo "Uses a program-file to accomplish the same thing"
 echo "  print3_6 contents:"
 cat print3_6
 echo "  sed output:"
-sed -n -f print3_6 new
+sed -n -f print3_6 file.txt
 echo
 
 
-# Quits after displaying the first 5 lines of the file new:
+# Quits after displaying the first 5 lines of the file file.txt:
 echo "============================================================"
-echo "Quits after displaying the first 5 lines of the file new"
-sed '5 q' new
+echo "Quits after displaying the first 5 lines of the file file.txt"
+sed '5 q' file.txt
 echo
 
 
@@ -60,7 +60,7 @@ echo
 echo "============================================================"
 echo "Selects line 2 and appends a NEWLINE and the text AFTER"
 sed '2 a\
-AFTER.' new
+AFTER.' file.txt
 echo
 
 
@@ -68,13 +68,13 @@ echo
 # with a TAB and the matched character (effectively inserting a TAB):
 echo "============================================================"
 echo "Insert a TAB in lines that begin with a non-empty character"
-sed 's/^./\t&/' new
+sed 's/^./\t&/' file.txt
 echo
 
 
-# Substitutes the word sentence for the word line in the file new
+# Substitutes the word sentence for the word line in the file file.txt
 # and displays each line where a substitution occurs:
 echo "============================================================"
 echo "Substituting 'sentence' for 'line'"
-sed 's/line/sentence/p' new
+sed 's/line/sentence/p' file.txt
 echo
