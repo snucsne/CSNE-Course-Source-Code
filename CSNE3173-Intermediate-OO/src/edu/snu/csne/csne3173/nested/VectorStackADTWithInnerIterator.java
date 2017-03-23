@@ -36,7 +36,7 @@ import java.util.Vector;
  *
  * @author Brent Eskridge
  */
-public class VectorStackADTWithInnerItterator<T> implements StackADT<T>
+public class VectorStackADTWithInnerIterator<T> implements StackADT<T>
 {
     /** Vector that is adapted */
     private Vector<T> _vector = new Vector<T>();
@@ -70,7 +70,7 @@ public class VectorStackADTWithInnerItterator<T> implements StackADT<T>
      * Builds this VectorStackADTWithInnerItterator object
      *
      */
-    public VectorStackADTWithInnerItterator()
+    public VectorStackADTWithInnerIterator()
     {
         // Do nothing
     }
