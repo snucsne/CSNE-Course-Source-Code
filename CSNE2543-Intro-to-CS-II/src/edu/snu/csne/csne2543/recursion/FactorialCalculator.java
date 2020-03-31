@@ -25,48 +25,48 @@ package edu.snu.csne.csne2543.recursion;
 
 public class FactorialCalculator
 {
-	public int recursiveFactorial( int n )
-	{
-		// Default to base case
-		int result = 1;
-		
-		// Do we make a recursive call?
-		if( 1 < n )
-		{
-			// Yes!
-			result = n * recursiveFactorial( n - 1 );
-		}
-		
-		return result;
-	}
-	
-	public int iterativeFactorial( int n )
-	{
-		// Default to 1
-		int result = 1;
-		
-		// Iterate through all the values from 1 to n
-		for( int i = 1; i <= n; i++ )
-		{
-			result = result * i;
-		}
-		
-		return result;
-	}
-	
-	public static void main( String[] args )
-	{
-		FactorialCalculator calculator = new FactorialCalculator();
-		
-		int recursiveFactorialResult = recursiveFactorial( 5 );
-		System.out.println( "Recursive: 5!=["
-				+ recursiveFactorialResult
-				+ "]" );
+    public int recursiveFactorial( int n )
+    {
+        // Default to base case
+        int result = 1;
+        
+        // Do we make a recursive call?
+        if( 1 < n )
+        {
+            // Yes!
+            result = n * recursiveFactorial( n - 1 );
+        }
+        
+        return result;
+    }
+    
+    public int iterativeFactorial( int n )
+    {
+        // Default to 1
+        int result = 1;
+        
+        // Iterate through all the values from 1 to n
+        for( int i = 1; i <= n; i++ )
+        {
+            result = result * i;
+        }
+        
+        return result;
+    }
+    
+    public static void main( String[] args )
+    {
+        FactorialCalculator calculator = new FactorialCalculator();
+        
+        int recursiveFactorialResult = recursiveFactorial( 5 );
+        System.out.println( "Recursive: 5!=["
+                + recursiveFactorialResult
+                + "]" );
 
-		int iterativeFactorialResult = iterativeFactorial( 5 );
-		System.out.println( "Iterative: 5!=["
-				+ iterativeFactorialResult
-				+ "]" );
+        int iterativeFactorialResult = iterativeFactorial( 5 );
+        System.out.println( "Iterative: 5!=["
+                + iterativeFactorialResult
+                + "]" );
 
-	}
+    }
 }
